@@ -6,8 +6,8 @@ using namespace std;
 
 //////////Funtion Prototypes///////////////
 void printMatrix(double grade[][7], int N_ROWS, int N_COLS);
-void GradeAvg(double grade[][7], int N_ROWS, int N_COLS);
-double Avg, gradeAvg, agrade;
+double GradeAvg(double grade[][7], int N_ROWS, int N_COLS);
+
 int main()
 {
   const int N_ROWS = 5;
@@ -37,18 +37,17 @@ void printMatrix(double grade[][7], int N_ROWS, int N_COLS){
   }
   return;
   }
-void GradeAvg(double grade[][7], int N_ROWS, int N_COLS){
-  //for (int r = 0; r < N_ROWS; r++) {
-    for (int c = 1; c < 4; c++){
-      double agrade = grade[1][c];  
-    
+double GradeAvg(double grade[][7], int N_ROWS, int N_COLS)
+{
+    for (int r = 0; r < N_ROWS; r++) 
+    {
+    for (int c = 1; c < 4; c++)
+      {
+       grade[r][6] = (grade[r][1]  + grade[r][2] +grade[r][3] + grade[r][4])/4;
+      }
+      cout<<grade[r][6]<<endl;
     }
-  double Avg = agrade;
-  double gradeAvg= (Avg/4);
-  cout<< gradeAvg<< endl;
+  return grade[N_ROWS][6];
 }
-
-
-    //    grade[i][6] = (grade[i][1] * .2) + (grade[i][2]*.3) +(grade[i][3] * .3) + (grade[i][4] *.2)
+ //  grade[i][6] = (grade[i][1] * .2) + (grade[i][2]*.3) +(grade[i][3] * .3) + (grade[i][4] *.2)
   
-

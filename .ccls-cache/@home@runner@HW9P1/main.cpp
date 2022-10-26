@@ -21,9 +21,13 @@ int main()
                         {5, 94, 84, 74, 64}
                         };
   cout << "Student" << setw(10)<< "Grade 1"<< setw(10)<< "Grade 2"<<setw(10)<< "Grade 3"<< setw(10)<< "Grade 4 "<< setw(15)<< "Grade Avg. "<< setw(15)<< "Final Grade"<< endl;
-  
-printMatrix (grade, N_ROWS, N_COLS);
+
+//grade[N_ROWS][5] = grade[N_ROWS][5];
 GradeAvg(grade, N_ROWS, N_COLS);
+printMatrix (grade, N_ROWS, N_COLS);
+
+
+  
   return 0;
   }
 
@@ -43,11 +47,13 @@ double GradeAvg(double grade[][7], int N_ROWS, int N_COLS)
     {
     for (int c = 1; c < 4; c++)
       {
-       grade[r][6] = (grade[r][1]  + grade[r][2] +grade[r][3] + grade[r][4])/4;
+       grade[r][5] = (grade[r][1]  + grade[r][2] +grade[r][3] + grade[r][4])/4;
       }
-      cout<<grade[r][6]<<endl;
+    //cout<<grade[r][6]<<endl;
+    
     }
-  return grade[N_ROWS][6];
+   return grade[N_ROWS][5];
 }
+
  //  grade[i][6] = (grade[i][1] * .2) + (grade[i][2]*.3) +(grade[i][3] * .3) + (grade[i][4] *.2)
   
